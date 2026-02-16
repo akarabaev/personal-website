@@ -217,12 +217,18 @@ main {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
-  box-shadow: 0 4px 24px rgba(14, 165, 233, 0.4);
+  box-shadow:
+    0 0 20px rgba(14, 165, 233, 0.5),
+    0 0 40px rgba(14, 165, 233, 0.3),
+    0 4px 24px rgba(14, 165, 233, 0.4);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .btn-cta:hover {
-  box-shadow: 0 6px 28px rgba(14, 165, 233, 0.5);
+  box-shadow:
+    0 0 28px rgba(14, 165, 233, 0.6),
+    0 0 56px rgba(14, 165, 233, 0.35),
+    0 6px 28px rgba(14, 165, 233, 0.5);
   transform: translateY(-1px);
 }
 
@@ -310,6 +316,19 @@ main {
     border-bottom: none;
   }
 
+  header nav a.btn-nav {
+    border: none;
+    background: transparent;
+    padding: 0.75rem 0;
+    color: #e5e5e5;
+    font-size: 0.95rem;
+  }
+
+  header nav a.btn-nav:hover {
+    background: transparent;
+    color: #0ea5e9;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
@@ -334,6 +353,17 @@ main {
     width: min(340px, 92vw);
     max-height: 70vh;
     min-height: 260px;
+  }
+
+  .btn-cta,
+  .btn-nav {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero-content .btn-cta {
+    width: max-content;
+    max-width: min(100%, 280px);
   }
 }
 
