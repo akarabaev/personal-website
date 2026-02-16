@@ -32,6 +32,8 @@ header {
   letter-spacing: 0.05em;
   color: #fff;
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .logo:hover {
