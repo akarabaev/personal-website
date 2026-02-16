@@ -8,10 +8,10 @@ export default function Hero() {
       <div className="hero-content">
         <h1 className="hero-name">Alisher Karabaev</h1>
         <p className="hero-role">
-          And I'm a <span className="accent">Data Science Squad Lead / Data Engineering Lead / ML Architect</span>
+          <span className="accent">Data Science Squad Lead / Data Engineering Lead / ML Architect</span>
         </p>
         <p className="hero-bio">
-          9 years of experience in the Data field, including 6+ years specializing in building and scaling ML systems, data platforms, and technical teams.
+          I have 9 years of experience in the Data field, including 6+ years in building and scaling ML systems, data platforms, and technical teams.
         </p>
         <div className="social">
           <a href="https://www.linkedin.com/in/alisher-karabaev/" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
