@@ -48,27 +48,35 @@ header {
 }
 
 .nav-toggle {
-  display: none;
+  display: none; /* shown only in @media below */
+  appearance: none;
+  -webkit-appearance: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  align-items: center;
+  gap: 6px;
   width: 44px;
   height: 44px;
   padding: 0;
-  background: transparent;
-  border: 1px solid #525252;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   cursor: pointer;
-  color: #fff;
+  color: #e5e5e5;
 }
 
 .nav-toggle-bar {
   display: block;
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: currentColor;
   border-radius: 1px;
-  margin: 0 auto;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 
 .nav-toggle:focus-visible {
@@ -299,38 +307,43 @@ main {
     order: 2;
   }
 
-  nav {
-    display: none !important;
+  /* Hide nav by default on small screens; only show when menu is open */
+  header nav {
+    display: none;
     order: 3;
     width: 100%;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     padding-top: 0.5rem;
-    border-top: 1px solid #2a2a2a;
     margin-top: 0.25rem;
+    border-top: 1px solid #2a2a2a;
     visibility: hidden;
     overflow: hidden;
     max-height: 0;
+    opacity: 0;
     padding-top: 0;
     margin-top: 0;
+    border-top-width: 0;
   }
 
   header.nav-open nav {
-    display: flex !important;
+    display: flex;
     visibility: visible;
     overflow: visible;
     max-height: 80vh;
+    opacity: 1;
     padding-top: 0.5rem;
     margin-top: 0.25rem;
+    border-top-width: 1px;
   }
 
-  nav a {
+  header nav a {
     padding: 0.75rem 0;
     border-bottom: 1px solid #1a1a1a;
   }
 
-  nav a:last-child {
+  header nav a:last-child {
     border-bottom: none;
   }
 
