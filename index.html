@@ -9,6 +9,11 @@
 <body>
   <header>
     <a href="#" class="logo">A&nbsp;K</a>
+    <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
     <nav>
       <a href="#hero">About</a>
       <a href="#experience">Experience</a>
@@ -210,5 +215,20 @@
     <a href="alisher_karabaev_cv.pdf" download>CV</a>
   </footer>
   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+  <script>
+    (function() {
+      var header = document.querySelector('header');
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function() {
+        var open = header.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() { header.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); });
+      });
+    })();
+  </script>
 </body>
 </html>

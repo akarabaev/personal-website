@@ -47,6 +47,35 @@ header {
   outline-offset: 4px;
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid #525252;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
+
 nav {
   display: flex;
   gap: 2rem;
@@ -262,6 +291,37 @@ main {
 @media (max-width: 768px) {
   header {
     gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+    order: 2;
+  }
+
+  nav {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 0.25rem;
+  }
+
+  header.nav-open nav {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
   }
 
   .hero {
