@@ -19,7 +19,7 @@ export default function Header({ navOpen, setNavOpen }) {
         <a href="#hero" onClick={closeNav}>About</a>
         <a href="#experience" onClick={closeNav}>Experience</a>
         <a href="#blog" onClick={closeNav}>Blog</a>
-        <a href="/alisher_karabaev_cv.pdf" className="btn btn-nav" download onClick={closeNav}>CV</a>
+        <a href={`${import.meta.env.BASE_URL}alisher_karabaev_cv.pdf`} className="btn btn-nav" download onClick={closeNav}>CV</a>
       </nav>
     </header>
   )

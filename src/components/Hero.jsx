@@ -25,7 +25,7 @@ export default function Hero() {
             </svg>
           </a>
         </div>
-        <a href="/alisher_karabaev_cv.pdf" className="btn btn-cta" download>Download CV</a>
+        <a href={`${import.meta.env.BASE_URL}alisher_karabaev_cv.pdf`} className="btn btn-cta" download>Download CV</a>
       </div>
       <div className="hero-image-wrap">
         {createElement('dotlottie-wc', { src: LOTTIE_URL, className: 'hero-lottie', autoplay: true, loop: true })}
