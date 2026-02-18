@@ -1,13 +1,15 @@
+const base = import.meta.env.BASE_URL
+
 const SKILLS = [
-  { name: 'Data Science', icon: '/assets/icons/scikitlearn.svg', alt: 'Data Science' },
-  { name: 'NLP', icon: '/assets/icons/nlp.svg', alt: 'NLP' },
-  { name: 'Agentic AI', icon: '/assets/icons/openai.svg', alt: 'Agentic AI' },
-  { name: 'MLOps', icon: '/assets/icons/kubernetes.svg', alt: 'MLOps' },
-  { name: 'Data Engineering', icon: '/assets/icons/postgresql.svg', alt: 'Data Engineering' },
-  { name: 'Python', icon: '/assets/icons/python.svg', alt: 'Python' },
-  { name: 'Web Development', icon: '/assets/icons/html5.svg', alt: 'Web Development' },
-  { name: 'Technical Leadership', icon: '/assets/icons/technical-leadership.svg', alt: 'Technical Leadership' },
-  { name: 'Cloud', icon: '/assets/icons/cloud.svg', alt: 'Cloud' },
+  { name: 'Data Science', icon: `${base}assets/icons/scikitlearn.svg`, alt: 'Data Science' },
+  { name: 'NLP', icon: `${base}assets/icons/nlp.svg`, alt: 'NLP' },
+  { name: 'Agentic AI', icon: `${base}assets/icons/openai.svg`, alt: 'Agentic AI' },
+  { name: 'MLOps', icon: `${base}assets/icons/kubernetes.svg`, alt: 'MLOps' },
+  { name: 'Data Engineering', icon: `${base}assets/icons/postgresql.svg`, alt: 'Data Engineering' },
+  { name: 'Python', icon: `${base}assets/icons/python.svg`, alt: 'Python' },
+  { name: 'Web Development', icon: `${base}assets/icons/html5.svg`, alt: 'Web Development' },
+  { name: 'Technical Leadership', icon: `${base}assets/icons/technical-leadership.svg`, alt: 'Technical Leadership' },
+  { name: 'Cloud', icon: `${base}assets/icons/cloud.svg`, alt: 'Cloud' },
 ]
 
 export default function Skills() {
